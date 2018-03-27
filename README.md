@@ -15,9 +15,9 @@ chmod +x getip.py
 
 ## USAGE
 ```
-./getip.py -l	             -  list all countries
-./getip.py -c Canada -f nmap -  get Canada ip ranges in nmap format
-./getip.py -n 70 -f cidr	 -  get Germany ip ranges in cidr format
+./getip.py -l	             	-  list all countries
+./getip.py -c Canada -f nmap 	-  get Canada ip ranges in nmap format
+./getip.py -n 70 -f cidr	 	-  get Germany ip ranges in cidr format
 
 nmap -n -sn -sL `~/getip/getip.py -n 197`
 ```
