@@ -2,6 +2,7 @@
 This script returns county ip range in 3 formats: cidr, nmap and simple. It can be directly called from tool like nmap to pass country range for scanning. Useful to use in conjunction with different tools like nmap.
 
 ## REQUIREMENTS
+
 python 2.7.14+
 requests==2.18.4
 netaddr==0.7.19
