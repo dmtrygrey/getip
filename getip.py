@@ -7,19 +7,24 @@ import re
 import netaddr
 import argparse
 
-__description__ = "This script returns ip range of chosen country"
-__author__ = "n3tr4k"
-__version__ = "0.1"
+__description__ = "This script returns ip range according to options"
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description=__description__, add_help=False)
-    parser.add_argument('-l', '--list', action='store_true', dest='list', default=False)
-    parser.add_argument('-c', '--country', action='store', dest='country', type=str, default="Canada")
-    parser.add_argument('-n', '--number', action='store', dest='country_num', type=int, default=None)
-    parser.add_argument('-f', '--format', action='store', dest='format', type=str, choices=["cidr","nmap","simple"], default="cidr")
-    parser.add_argument('--version', action='version', version='Version: ' + __version__ + '; Author: ' + __author__)
-    parser.add_argument('-h', '--help', action='store_true', dest='help', default=False)
+    parser = argparse.ArgumentParser(description=__description__, \
+            add_help=False)
+    parser.add_argument('-l', '--list', action='store_true', dest='list', \
+            default=False)
+    parser.add_argument('-c', '--country', action='store', dest='country', \
+            type=str, default="Canada")
+    parser.add_argument('-n', '--number', action='store', dest='country_num', \
+            type=int, default=None)
+    parser.add_argument('-f', '--format', action='store', dest='format', \
+            type=str, choices=["cidr","nmap","simple"], default="cidr")
+    parser.add_argument('--version', action='version', \
+            version='Version: ' + __version__ + '; Author: ' + __author__)
+    parser.add_argument('-h', '--help', action='store_true', dest='help', \
+            default=False)
 
     args = parser.parse_args()
 
@@ -33,10 +38,10 @@ def parse_arguments():
 def print_help(parser, args):
     print(parser.description)
     print("")
-    print("  -l, --list\t" + "No IPs, just list all countries")
+    print("  -l, --list\t" + "No IPs, just list all IPs of countries you can recieve")
     print("  -c, --country\t" + "Name of country to get IP range")
     print("  -n, --country_num\t" + "Number of country to get IP range")
-    print("  -f, --format\t" + "In what fornat to print ips, 'cidr', 'nmap', 'simple'")
+    print("  -f, --format\t" + "In what format to print ips, 'cidr', 'nmap', 'simple'")
     print("  --version\t" + "Show script vesion")
     print("  -h, --help\t" + "Prints this message")
     print("")
