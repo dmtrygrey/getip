@@ -29,8 +29,8 @@ python2 getip.py -n 70 -f cidr        :get Germany ip ranges in cidr format
 
 nmap -n -sn -sL `python getip.py -n 197`
 
-python3 iprange.py -l 192.168.0.1/24    :produce a list of IPs divided by newline
-python3 iprange.py -r 192.168.0.0 192.168.0.255
+python3 iprange.py -l 192.168.0.1/24  :produce a list of IPs divided by newline
+python3 iprange.py -r 192.168.0.0 192.168.0.255 :produce a list of IPs in CIDR format divided by newline
 ```
 
 ## LICENSE:
