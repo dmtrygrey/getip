@@ -21,8 +21,6 @@ def parse_arguments():
             type=int, default=None)
     parser.add_argument('-f', '--format', action='store', dest='format', \
             type=str, choices=["cidr","nmap","simple"], default="cidr")
-    parser.add_argument('--version', action='version', \
-            version='Version: ' + __version__ + '; Author: ' + __author__)
     parser.add_argument('-h', '--help', action='store_true', dest='help', \
             default=False)
 
